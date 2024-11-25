@@ -1,0 +1,2 @@
+dataset_name,num_instances,num_features,num_classes,class_imbalance,avg_feature_correlation,sparsity,task_type
+dna,2586,180,3,0.45346239761727475,0.03185593082134728,0.7473274899028959,classification

@@ -1,0 +1,2 @@
+dataset_name,num_instances,num_features,num_classes,class_imbalance,avg_feature_correlation,sparsity,task_type
+usps,9298,256,10,0.4558918222794591,0.20746088835551588,8.402344590097144e-07,classification

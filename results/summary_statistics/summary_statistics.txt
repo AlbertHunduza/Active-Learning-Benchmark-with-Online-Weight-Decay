@@ -1,0 +1,529 @@
+Overall Strategy Stability (Lowest to Highest std):
+================================================================================
+                       mean     std
+classifier_name                    
+meta-learning model  0.7508  0.0652
+cocktail             0.7421  0.0658
+grid search          0.7549  0.0662
+static               0.7533  0.0667
+exponential          0.7344  0.0964
+sigmoid              0.6946  0.1143
+polynomial           0.7037  0.1151
+cosine               0.6924  0.1164
+linear               0.6925  0.1179
+
+
+Per Dataset Across Agents (Sorted by std):
+================================================================================
+                       mean     std
+classifier_name                    
+static               0.7551  0.0219
+exponential          0.7672  0.0220
+meta-learning model  0.7357  0.0231
+grid search          0.7404  0.0255
+linear               0.7648  0.0257
+polynomial           0.7673  0.0272
+sigmoid              0.7638  0.0294
+cosine               0.7585  0.0329
+cocktail             0.7251  0.0331
+
+Dataset: Splice
+                       mean     std
+classifier_name                    
+linear               0.5266  0.0207
+cocktail             0.7447  0.1051
+cosine               0.5183  0.0959
+sigmoid              0.5241  0.0373
+polynomial           0.5203  0.0321
+meta-learning model  0.7348  0.0536
+grid search          0.7376  0.0537
+static               0.7112  0.0890
+exponential          0.6056  0.0291
+
+Dataset: USPS
+                       mean     std
+classifier_name                    
+meta-learning model  0.7728  0.0711
+grid search          0.7697  0.0777
+exponential          0.7779  0.0796
+static               0.7712  0.0828
+cocktail             0.7537  0.0915
+polynomial           0.7283  0.1132
+sigmoid              0.7113  0.1177
+cosine               0.7114  0.1202
+linear               0.7027  0.1285
+
+Dataset: TopV2
+                       mean     std
+classifier_name                    
+meta-learning model  0.7622  0.0627
+grid search          0.7584  0.0735
+exponential          0.7586  0.0826
+static               0.7568  0.0757
+cocktail             0.7283  0.0903
+polynomial           0.7465  0.0671
+sigmoid              0.7306  0.0768
+cosine               0.7318  0.0802
+linear               0.7458  0.0765
+
+
+Per Agent Across Datasets (Sorted by std):
+================================================================================
+
+Agent: Badge
+                       mean     std
+classifier_name                    
+linear               0.8009  0.0304
+sigmoid              0.8011  0.0307
+cosine               0.8004  0.0342
+polynomial           0.8070  0.0355
+static               0.8050  0.0377
+exponential          0.8097  0.0398
+grid search          0.8050  0.0467
+meta-learning model  0.8020  0.0516
+cocktail             0.7915  0.0553
+
+Agent: BALD
+                       mean     std
+classifier_name                    
+grid search          0.7447  0.0326
+cocktail             0.7232  0.0342
+meta-learning model  0.7349  0.0351
+static               0.7551  0.0367
+exponential          0.6914  0.0914
+sigmoid              0.6298  0.0921
+polynomial           0.6445  0.0937
+linear               0.6144  0.1020
+cosine               0.6246  0.1021
+
+Agent: TypiClust
+                       mean     std
+classifier_name                    
+static               0.6667  0.0573
+meta-learning model  0.6498  0.0610
+grid search          0.6529  0.0767
+cocktail             0.6406  0.0740
+exponential          0.6679  0.0784
+polynomial           0.6434  0.0990
+cosine               0.6218  0.1057
+sigmoid              0.6227  0.1056
+linear               0.6151  0.1215
+
+Agent: Coreset
+                       mean     std
+classifier_name                    
+static               0.7554  0.0427
+meta-learning model  0.7481  0.0376
+grid search          0.7489  0.0389
+exponential          0.7398  0.0264
+cocktail             0.7351  0.0548
+sigmoid              0.6945  0.0833
+cosine               0.6880  0.0864
+polynomial           0.7038  0.0864
+linear               0.6868  0.0881
+
+Agent: MarginScore
+                       mean     std
+classifier_name                    
+cocktail             0.7817  0.0524
+grid search          0.7869  0.0524
+meta-learning model  0.7858  0.0618
+static               0.7761  0.0641
+exponential          0.7607  0.1097
+linear               0.7322  0.1238
+sigmoid              0.7249  0.1275
+cosine               0.7244  0.1293
+polynomial           0.7302  0.1347
+
+Agent: ShannonEntropy
+                       mean     std
+classifier_name                    
+cocktail             0.7512  0.0353
+meta-learning model  0.7628  0.0390
+grid search          0.7700  0.0440
+static               0.7550  0.0665
+linear               0.6901  0.1046
+cosine               0.6884  0.1059
+sigmoid              0.6891  0.1087
+exponential          0.7325  0.1105
+polynomial           0.6953  0.1155
+
+Agent: Random
+                       mean     std
+classifier_name                    
+cocktail             0.7586  0.0480
+meta-learning model  0.7595  0.0640
+grid search          0.7625  0.0683
+static               0.7511  0.0863
+exponential          0.7409  0.1090
+linear               0.7155  0.1232
+sigmoid              0.7090  0.1307
+cosine               0.7086  0.1309
+polynomial           0.7122  0.1325
+
+
+Per Agent Per Dataset (Sorted by std):
+================================================================================
+
+Dataset: DNA, Agent: Badge
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_Badge               grid search          0.7492  0.0142
+                        polynomial           0.7741  0.0156
+                        meta-learning model  0.7368  0.0173
+                        linear               0.7776  0.0216
+                        cosine               0.7700  0.0231
+                        sigmoid              0.7742  0.0241
+                        exponential          0.7694  0.0255
+                        static               0.7659  0.0292
+                        cocktail             0.7339  0.0423
+
+Dataset: DNA, Agent: BALD
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_BALD                meta-learning model  0.7619  0.0144
+                        static               0.7754  0.0169
+                        grid search          0.7690  0.0176
+                        cocktail             0.7376  0.0229
+                        sigmoid              0.7403  0.0280
+                        exponential          0.7741  0.0297
+                        linear               0.7489  0.0364
+                        polynomial           0.7437  0.0457
+                        cosine               0.7512  0.0532
+
+Dataset: DNA, Agent: TypiClust
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_TypiClust           linear               0.7564  0.0162
+                        static               0.7386  0.0170
+                        polynomial           0.7594  0.0175
+                        exponential          0.7589  0.0188
+                        meta-learning model  0.7196  0.0204
+                        grid search          0.7301  0.0216
+                        sigmoid              0.7478  0.0229
+                        cocktail             0.7264  0.0336
+                        cosine               0.7337  0.0401
+
+Dataset: DNA, Agent: Coreset
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_Coreset             cosine               0.7354  0.0126
+                        linear               0.7387  0.0140
+                        exponential          0.7519  0.0200
+                        static               0.7494  0.0204
+                        polynomial           0.7609  0.0208
+                        sigmoid              0.7520  0.0226
+                        meta-learning model  0.7236  0.0278
+                        grid search          0.7269  0.0309
+                        cocktail             0.6983  0.0443
+
+Dataset: DNA, Agent: MarginScore
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_MarginScore         exponential          0.7696  0.0191
+                        static               0.7533  0.0202
+                        linear               0.7769  0.0232
+                        cocktail             0.7333  0.0263
+                        meta-learning model  0.7440  0.0267
+                        cosine               0.7727  0.0281
+                        polynomial           0.7776  0.0294
+                        grid search          0.7425  0.0321
+                        sigmoid              0.7923  0.0323
+
+Dataset: DNA, Agent: ShannonEntropy
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_ShannonEntropy      meta-learning model  0.7373  0.0171
+                        linear               0.7844  0.0177
+                        cosine               0.7789  0.0187
+                        static               0.7556  0.0208
+                        exponential          0.7801  0.0228
+                        polynomial           0.7859  0.0248
+                        grid search          0.7358  0.0267
+                        cocktail             0.7249  0.0281
+                        sigmoid              0.7744  0.0327
+
+Dataset: DNA, Agent: Random
+                                               mean     std
+simplified_dataset_name classifier_name                    
+DNA_RandomAgent         grid search          0.7295  0.0081
+                        polynomial           0.7692  0.0122
+                        exponential          0.7662  0.0125
+                        static               0.7473  0.0126
+                        meta-learning model  0.7264  0.0133
+                        cosine               0.7674  0.0139
+                        sigmoid              0.7658  0.0145
+                        linear               0.7708  0.0155
+                        cocktail             0.7215  0.0292
+
+Dataset: Splice, Agent: Badge
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_Badge            linear               0.5214  0.0007
+                        cocktail             0.7625  0.0098
+                        static               0.7733  0.0139
+                        exponential          0.7214  0.0142
+                        grid search          0.7450  0.0193
+                        sigmoid              0.5339  0.0242
+                        meta-learning model  0.7661  0.0248
+                        cosine               0.5304  0.0267
+                        polynomial           0.5669  0.0778
+
+Dataset: Splice, Agent: BALD
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_BALD             cocktail             0.7486  0.0157
+                        polynomial           0.5322  0.0164
+                        linear               0.5256  0.0186
+                        cosine               0.5140  0.0254
+                        sigmoid              0.5259  0.0278
+                        meta-learning model  0.7594  0.0286
+                        grid search          0.7508  0.0317
+                        exponential          0.5538  0.0358
+                        static               0.7329  0.0601
+
+Dataset: Splice, Agent: TypiClust
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_TypiClust        cosine               0.5099  0.0177
+                        meta-learning model  0.7579  0.0246
+                        cocktail             0.7314  0.0252
+                        exponential          0.5426  0.0482
+                        grid search          0.6879  0.0621
+                        static               0.7034  0.0750
+                        linear               0.5071     NaN
+
+Dataset: Splice, Agent: Coreset
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_Coreset          linear               0.5431  0.0100
+                        cocktail             0.7533  0.0165
+                        static               0.7464  0.0223
+                        cosine               0.5508  0.0258
+                        exponential          0.6815  0.0268
+                        polynomial           0.5643  0.0367
+                        grid search          0.7324  0.0382
+                        sigmoid              0.5634  0.0397
+                        meta-learning model  0.7369  0.0458
+
+Dataset: Splice, Agent: MarginScore
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_MarginScore      polynomial           0.5072  0.0148
+                        linear               0.5277  0.0234
+                        cosine               0.5131  0.0297
+                        sigmoid              0.5243  0.0372
+                        grid search          0.7496  0.0410
+                        cocktail             0.7482  0.0421
+                        meta-learning model  0.7300  0.0614
+                        static               0.7083  0.0803
+                        exponential          0.6166  0.1296
+
+Dataset: Splice, Agent: ShannonEntropy
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_ShannonEntropy   polynomial           0.5079  0.0118
+                        cocktail             0.7517  0.0238
+                        linear               0.5275  0.0239
+                        cosine               0.5234  0.0284
+                        sigmoid              0.5173  0.0309
+                        meta-learning model  0.7501  0.0318
+                        grid search          0.7527  0.0333
+                        static               0.7108  0.1139
+                        exponential          0.5907  0.1457
+
+Dataset: Splice, Agent: Random
+                                               mean     std
+simplified_dataset_name classifier_name                    
+Splice_RandomAgent      cosine               0.4901  0.0032
+                        polynomial           0.4899  0.0035
+                        sigmoid              0.4896  0.0040
+                        linear               0.5091  0.0150
+                        cocktail             0.7215  0.0352
+                        meta-learning model  0.6978  0.0794
+                        grid search          0.7023  0.0965
+                        exponential          0.5851  0.1139
+                        static               0.6574  0.1300
+
+Dataset: USPS, Agent: Badge
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_Badge              cosine               0.8317  0.0052
+                        linear               0.8260  0.0079
+                        grid search          0.8458  0.0084
+                        static               0.8367  0.0086
+                        meta-learning model  0.8447  0.0090
+                        sigmoid              0.8246  0.0100
+                        exponential          0.8441  0.0101
+                        cocktail             0.8388  0.0108
+                        polynomial           0.8382  0.0122
+
+Dataset: USPS, Agent: BALD
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_BALD               grid search          0.7451  0.0144
+                        meta-learning model  0.7058  0.0254
+                        static               0.7519  0.0275
+                        exponential          0.7016  0.0305
+                        cocktail             0.6973  0.0398
+                        cosine               0.5758  0.0398
+                        sigmoid              0.5740  0.0438
+                        linear               0.5453  0.0497
+                        polynomial           0.5978  0.0512
+
+Dataset: USPS, Agent: TypiClust
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_TypiClust          exponential          0.6212  0.0293
+                        static               0.6267  0.0325
+                        meta-learning model  0.6116  0.0330
+                        grid search          0.6157  0.0338
+                        cocktail             0.5747  0.0383
+                        polynomial           0.5399  0.0473
+                        sigmoid              0.5182  0.0539
+                        cosine               0.5143  0.0574
+                        linear               0.4958  0.0661
+
+Dataset: USPS, Agent: Coreset
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_Coreset            linear               0.7116  0.0147
+                        polynomial           0.7362  0.0154
+                        sigmoid              0.7118  0.0157
+                        static               0.7516  0.0157
+                        grid search          0.7650  0.0169
+                        meta-learning model  0.7675  0.0175
+                        exponential          0.7644  0.0202
+                        cocktail             0.7449  0.0204
+                        cosine               0.7087  0.0220
+
+Dataset: USPS, Agent: MarginScore
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_MarginScore        cocktail             0.8382  0.0078
+                        exponential          0.8451  0.0114
+                        static               0.8358  0.0116
+                        meta-learning model  0.8468  0.0128
+                        polynomial           0.8303  0.0138
+                        grid search          0.8458  0.0140
+                        linear               0.8197  0.0184
+                        cosine               0.8189  0.0271
+                        sigmoid              0.8137  0.0297
+
+Dataset: USPS, Agent: ShannonEntropy
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_ShannonEntropy     exponential          0.7907  0.0156
+                        grid search          0.8087  0.0160
+                        static               0.7965  0.0187
+                        linear               0.7229  0.0264
+                        meta-learning model  0.8009  0.0281
+                        cocktail             0.7722  0.0336
+                        polynomial           0.7453  0.0346
+                        sigmoid              0.7359  0.0412
+                        cosine               0.7275  0.0443
+
+Dataset: USPS, Agent: Random
+                                               mean     std
+simplified_dataset_name classifier_name                    
+USPS_RandomAgent        cosine               0.8028  0.0079
+                        polynomial           0.8101  0.0082
+                        sigmoid              0.8009  0.0089
+                        cocktail             0.8095  0.0096
+                        grid search          0.8189  0.0097
+                        static               0.8106  0.0098
+                        linear               0.7974  0.0101
+                        exponential          0.8205  0.0104
+                        meta-learning model  0.8210  0.0106
+
+Dataset: TopV2, Agent: Badge
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_Badge             meta-learning model  0.8245  0.0279
+                        static               0.8125  0.0281
+                        sigmoid              0.8046  0.0313
+                        cosine               0.7996  0.0334
+                        grid search          0.8201  0.0339
+                        linear               0.7990  0.0348
+                        exponential          0.8155  0.0349
+                        polynomial           0.8088  0.0376
+                        cocktail             0.8018  0.0410
+
+Dataset: TopV2, Agent: BALD
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_BALD              static               0.7602  0.0201
+                        meta-learning model  0.7125  0.0280
+                        cocktail             0.7093  0.0313
+                        sigmoid              0.6789  0.0367
+                        grid search          0.7138  0.0382
+                        polynomial           0.7045  0.0383
+                        exponential          0.7363  0.0435
+                        cosine               0.6573  0.0697
+                        linear               0.6378  0.0788
+
+Dataset: TopV2, Agent: TypiClust
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_TypiClust         static               0.6349  0.0225
+                        cocktail             0.6206  0.0384
+                        polynomial           0.6310  0.0395
+                        sigmoid              0.6022  0.0460
+                        meta-learning model  0.6182  0.0486
+                        linear               0.5933  0.0626
+                        cosine               0.6174  0.0643
+                        exponential          0.6235  0.0689
+                        grid search          0.6130  0.0876
+
+Dataset: TopV2, Agent: Coreset
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_Coreset           polynomial           0.7538  0.0285
+                        sigmoid              0.7508  0.0289
+                        linear               0.7537  0.0327
+                        exponential          0.7615  0.0362
+                        static               0.7742  0.0383
+                        cosine               0.7572  0.0388
+                        meta-learning model  0.7643  0.0411
+                        grid search          0.7714  0.0494
+                        cocktail             0.7440  0.0944
+
+Dataset: TopV2, Agent: MarginScore
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_MarginScore       static               0.8069  0.0194
+                        grid search          0.8098  0.0300
+                        meta-learning model  0.8226  0.0311
+                        polynomial           0.8057  0.0315
+                        linear               0.8045  0.0318
+                        cocktail             0.8071  0.0368
+                        exponential          0.8116  0.0380
+                        cosine               0.7929  0.0419
+                        sigmoid              0.7691  0.0766
+
+Dataset: TopV2, Agent: ShannonEntropy
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_ShannonEntropy    exponential          0.7683  0.0414
+                        polynomial           0.7422  0.0428
+                        cocktail             0.7559  0.0433
+                        sigmoid              0.7288  0.0447
+                        static               0.7572  0.0464
+                        meta-learning model  0.7629  0.0470
+                        cosine               0.7239  0.0508
+                        grid search          0.7830  0.0552
+                        linear               0.7254  0.0596
+
+Dataset: TopV2, Agent: Random
+                                               mean     std
+simplified_dataset_name classifier_name                    
+TopV2_RandomAgent       polynomial           0.7795  0.0215
+                        meta-learning model  0.7928  0.0217
+                        sigmoid              0.7798  0.0231
+                        static               0.7893  0.0232
+                        linear               0.7847  0.0251
+                        exponential          0.7919  0.0275
+                        grid search          0.7994  0.0301
+                        cocktail             0.7817  0.0367
+                        cosine               0.7741  0.0374
+
