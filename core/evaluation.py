@@ -206,6 +206,7 @@ def compute_ranks_over_trials(df:pd.DataFrame):
 
 def combine_agents_into_df(dataset=None, query_size=None, agent=None,
                            max_loaded_runs=None, include_oracle=False):
+    '''
     def _load_trials_for_agent(dataset_name, query_size_name, agent_name):
         if query_size_name is not None:
             agent_folder = join(base_folder, dataset_name, query_size_name, agent_name)
@@ -230,6 +231,37 @@ def combine_agents_into_df(dataset=None, query_size=None, agent=None,
                         df_data["trial"].append(trial)
                         df_data["iteration"].append(iteration)
                         df_data["auc"].append(accuracies[iteration, trial])
+    '''
+
+    def _load_trials_for_agent(dataset_name, query_size_name, agent_name):
+        agent_folder = join(base_folder, dataset_name, query_size_name, agent_name) if query_size_name else join(base_folder, dataset_name, agent_name)
+        acc_file = join(agent_folder, "accuracies.csv")
+
+        if not exists(acc_file):
+            print(f"Missing accuracy file: {acc_file}")
+            return  # Skip if accuracy file is missing
+
+        accuracies = pd.read_csv(acc_file, header=0, index_col=0).values
+        n_iterations, n_trials = accuracies.shape  # Get the shape of the accuracies array
+
+        if max_loaded_runs:
+            N = min(max_loaded_runs, n_trials)  # Limit trials to the smaller of max_loaded_runs or available trials
+        else:
+            N = n_trials
+
+        for trial in range(N):  # Loop over available trials only
+            for iteration in range(n_iterations):  # Loop over available iterations only
+                try:
+                    if not np.isnan(accuracies[iteration, trial]):  # Check for valid data
+                        df_data["dataset"].append(dataset_name)
+                        df_data["query_size"].append(query_size_name if query_size_name else 1)
+                        df_data["agent"].append(name_corrections.get(agent_name, agent_name))
+                        df_data["trial"].append(trial)
+                        df_data["iteration"].append(iteration)
+                        df_data["auc"].append(accuracies[iteration, trial])
+                except IndexError:
+                    print(f"IndexError: Skipping trial {trial} or iteration {iteration} for {agent_name} in {query_size_name}")
+
 
 
     base_folder = "runs"
@@ -280,23 +312,5 @@ def average_out_columns(df:pd.DataFrame, columns:list):
         result_df = pd.concat(result_list)
     return result_df
 
-
-
-if __name__ == '__main__':
-    # combine_agents_into_df(["Cifar10", "FashionMnist"], include_oracle=True)
-
-    leaderboard = generate_full_overview()
-    leaderboard.to_csv("results/overview.csv")
-
-    # _find_missing_runs()
-
-    # run = "runs/Splice"
-    # df = combine_agents_into_df(dataset="Splice")
-    # df = average_out_columns(df, ["iteration"])
-    # df = df.drop("dataset", axis=1)
-    # t_table = two_tailed_paired_t_test(df, treatment_col="query_size", sample_col="trial")
-    # heatmap_data = t_table[t_table["query_size"] == "1"]#.drop(["query_size"], axis=1)
-    # plot_heatmap_individual(heatmap_data, None, None)
-    # plot_heatmap_individual(t_table.pivot(index="M0", columns="M1", values="t_value"), None, None)
 
 
